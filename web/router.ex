@@ -22,7 +22,7 @@ defmodule Challengesapp.Router do
   # Other scopes may use custom stacks.
   scope "/api", Challengesapp do
     pipe_through :api
-    resources "/users", UserController
-    resources "/challenges", ChallengeController
+    resources "/user", UserController
+    resources "/challenge", ChallengeController
   end
 end

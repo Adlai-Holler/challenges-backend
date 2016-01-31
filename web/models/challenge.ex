@@ -13,7 +13,7 @@ defmodule Challengesapp.Challenge do
   end
 
   @required_fields ~w(title seen)
-  @optional_fields ~w(fulfilled_at accepted_at)
+  @optional_fields ~w(fulfilled_at accepted_at began_at)
 
   @doc """
   Creates a changeset based on the `model` and `params`.

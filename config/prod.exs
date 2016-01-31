@@ -20,11 +20,11 @@ config :challengesapp, Challengesapp.Endpoint,
 config :logger, level: :info
 
 # Configure secret_key_base for cookie-based session storage
-  config :challengesapp, MyApp.Endpoint,
+  config :challengesapp, Challengesapp.Endpoint,
   secret_key_base: System.get_env("SECRET_KEY_BASE")
 
 # Configure your database
-  config :challengesapp, MyApp.Repo,
+  config :challengesapp, Challengesapp.Repo,
   adapter: Ecto.Adapters.Postgres,
   url: System.get_env("DATABASE_URL"),
   size: 20 # The amount of database connections in the pool

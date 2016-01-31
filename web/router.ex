@@ -23,5 +23,6 @@ defmodule Challengesapp.Router do
   scope "/api", Challengesapp do
     pipe_through :api
     resources "/users", UserController
+    resources "/challenges", ChallengeController
   end
 end

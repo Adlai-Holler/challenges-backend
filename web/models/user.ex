@@ -22,6 +22,7 @@ defmodule Challengesapp.User do
     model
     |> cast(params, @required_fields, @optional_fields)
     |> validate_format(:email, ~r/@/)
+    |> unique_constraint(:username)
     |> unique_constraint(:email)
   end
 end

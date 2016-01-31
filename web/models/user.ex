@@ -21,5 +21,7 @@ defmodule Challengesapp.User do
   def changeset(model, params \\ :empty) do
     model
     |> cast(params, @required_fields, @optional_fields)
+    |> validate_format(:email, ~r/@/)
+    |> unique_constraint(:email)
   end
 end

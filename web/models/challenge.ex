@@ -4,16 +4,16 @@ defmodule Challengesapp.Challenge do
   schema "challenges" do
     field :title, :string
     field :seen, :boolean, default: false
-    field :accepted, :boolean, default: false
-    field :fulfilled, :boolean, default: false
+    field :accepted_at, Ecto.DateTime
+    field :fulfilled_at, Ecto.DateTime
     belongs_to :receiver, Challengesapp.Receiver
     belongs_to :sender, Challengesapp.Sender
 
     timestamps
   end
 
-  @required_fields ~w(title seen accepted fulfilled)
-  @optional_fields ~w()
+  @required_fields ~w(title seen)
+  @optional_fields ~w(fulfilled_at accepted_at)
 
   @doc """
   Creates a changeset based on the `model` and `params`.

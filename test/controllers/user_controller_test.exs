@@ -2,7 +2,7 @@ defmodule Challengesapp.UserControllerTest do
   use Challengesapp.ConnCase
 
   alias Challengesapp.User
-  @valid_attrs %{email: "some content", password: "some content", username: "some content"}
+  @valid_attrs %{email: "test@test.com", password: "some content", username: "some content"}
   @invalid_attrs %{}
 
   setup %{conn: conn} do

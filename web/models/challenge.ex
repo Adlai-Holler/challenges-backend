@@ -6,6 +6,7 @@ defmodule Challengesapp.Challenge do
     field :seen, :boolean, default: false
     field :accepted_at, Ecto.DateTime
     field :fulfilled_at, Ecto.DateTime
+    field :began_at, Ecto.DateTime
     belongs_to :receiver, Challengesapp.Receiver
     belongs_to :sender, Challengesapp.Sender
 

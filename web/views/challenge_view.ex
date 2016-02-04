@@ -13,9 +13,10 @@ defmodule Challengesapp.ChallengeView do
     %{id: challenge.id,
       title: challenge.title,
       seen: challenge.seen,
-      accepted: challenge.accepted,
-      fulfilled: challenge.fulfilled,
+      accepted_at: challenge.accepted_at,
+      fulfilled_at: challenge.fulfilled_at,
       receiver_id: challenge.receiver_id,
-      sender_id: challenge.sender_id}
+      sender_id: challenge.sender_id,
+      began_at: challenge.began_at}
   end
 end

@@ -2,7 +2,7 @@ defmodule Challengesapp.ChallengeControllerTest do
   use Challengesapp.ConnCase
 
   alias Challengesapp.Challenge
-  @valid_attrs %{accepted: true, fulfilled: true, seen: true, title: "some content"}
+  @valid_attrs %{seen: true, title: "some content"}
   @invalid_attrs %{}
 
   setup %{conn: conn} do
@@ -20,8 +20,9 @@ defmodule Challengesapp.ChallengeControllerTest do
     assert json_response(conn, 200)["data"] == %{"id" => challenge.id,
       "title" => challenge.title,
       "seen" => challenge.seen,
-      "accepted" => challenge.accepted,
-      "fulfilled" => challenge.fulfilled,
+      "began_at" => challenge.began_at,
+      "accepted_at" => challenge.accepted_at,
+      "fulfilled_at" => challenge.fulfilled_at,
       "receiver_id" => challenge.receiver_id,
       "sender_id" => challenge.sender_id}
   end

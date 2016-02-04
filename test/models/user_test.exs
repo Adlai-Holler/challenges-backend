@@ -3,7 +3,7 @@ defmodule Challengesapp.UserTest do
 
   alias Challengesapp.User
 
-  @valid_attrs %{email: "some content", password: "some content", username: "some content"}
+  @valid_attrs %{email: "joe@test.com", password: "some content", username: "some content"}
   @invalid_attrs %{}
 
   test "changeset with valid attributes" do
